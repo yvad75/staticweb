@@ -1,6 +1,7 @@
 FROM ubuntu:14.04
 MAINTAINER Docker Education Team <education@docker.com>
-
+ENV http_proxy="http://10.169.85.155:3128"
+ENV https_proxy="http://10.169.85.155:3128"
 RUN apt-get update
 RUN apt-get install -y nginx
 RUN echo 'Hi, I am in your container' \
